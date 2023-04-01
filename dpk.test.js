@@ -14,4 +14,9 @@ describe("deterministicPartitionKey", () => {
         expect(deterministicPartitionKey(inputValue)).toBe(expected);
       },
   );
+
+  it("Check on function value", () => {
+      expect(()=>deterministicPartitionKey(()=>"some value"))
+          .toThrow("The \"data\" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined");
+  });
 });

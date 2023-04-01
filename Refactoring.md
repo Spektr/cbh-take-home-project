@@ -9,3 +9,12 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+// 1. change export statement (it is more readable and can be extended by additional valuables)
+// 2. change function declaration (also more readable)
+// 3. add jdoc comments (all shared features should have readable interfaces)
+// 4. move constants to file definition (prevent redefine it, and could export to other parts of code)
+// 5. join if statements
+// 6. move out get hash function (DRY)
+
+These points have been refactored (I leaved comments in code).
+Also I think it's better to use only partitionKey, without putting it into object (if there is not any subparams and use some transpillers as Typescript to prevent passing wrong input)
