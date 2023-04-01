@@ -16,3 +16,38 @@ Based on the information given, break this ticket down into 2-5 individual ticke
 You will be graded on the level of detail in each ticket, the clarity of the execution plan within and between tickets, and the intelligibility of your language. You don't need to be a native English speaker, but please proof-read your work.
 
 ## Your Breakdown Here
+
+Ticket 1: Add Custom ID Field to Agent Table
+
+Description:
+we need to add custom id in our database (agent table)
+
+Acceptance:
+- "custom_id" column is added to the Agent table. (db)
+- it should be displayed in our UI (front)
+- need to validate this id on uniqueness for Facility (front,back,db)
+
+Effort Estimate: about 4-8 hours
+
+Implementation Details:
+- create migration to db for new fied "custom_id"
+- update all dto and models in backend
+- add UI to create/edit/show new field
+- add validation on front for unique field
+
+
+Ticket 2: Update Shift table
+
+Description:
+for generating reports, we need to update the Shifts table to include new field
+
+Acceptance Criteria:
+- "custom_agent_id" field is added to the shifts table and linked to agent table
+- change all involved API as getShiftsByFacility
+- 
+Effort Estimate: 3-5 hours
+
+Implementation Details:
+
+- create migration to db for new fied "custom_agent_id"
+- modify getShiftsByFacility api
